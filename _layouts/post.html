@@ -1,0 +1,56 @@
+---
+layout: base
+---
+
+
+    <div id="page-content">
+
+        <div class="box-content">
+            <div class="container">
+
+<div class="entry-header text-center">
+                            <h1 class="entry-title">{{page.title}}</h1>
+                            <span class="entry-meta">
+                                <ul class="list-inline link">
+
+                                    <li><a href="#">{{page.date|date_to_long_string}}</a></li>
+
+                                    <li><a href="#">{{page.author|default: site.author}}</a></li>
+                                </ul>
+                            </span>
+                        </div>
+
+    <div class="post-thumbnail-wrap">
+              <div class="portfolio-box zoom-effect">
+                   <img src="{{site.baseurl}}/images/single.jpg" class="img-responsive" alt="">
+              </div>
+          </div>
+
+                <article class="single-post">
+                    <div class="wrap-post">
+                        <div class="entry-header text-center">
+
+                           {{content}}
+
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+ <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="clearfix">
+          {% if page.previous %}
+            <a class="btn btn-primary float-left" href="{{site.baseurl}}/{{page.previous.url}}">上一篇： {{page.previous.title}}</a>
+          {% endif %}
+          {% if page.next %}
+            <a class="btn btn-primary float-right" href="{{site.baseurl}}/{{page.next.url}}">下一篇： {{page.next.title}}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+        </div>
+
+    </div>
+
+
